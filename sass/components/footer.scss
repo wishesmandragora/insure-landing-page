@@ -1,0 +1,84 @@
+@import '../base/colors.scss';
+
+footer {
+    background: #fafafa;
+    padding: 64px 20px;
+    background-image: url(/images/bg-pattern-footer-desktop.svg);
+    background-repeat: no-repeat;
+    background-position: top left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width:992px) {
+        background-image: url(/images/bg-pattern-footer-mobile.svg);
+    }
+    .footer-bottom-widget {
+        display: grid;
+        padding-top: 32px;
+        width: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        .col {
+            @media screen and (max-width: 992px) {
+                grid-column: 1 / 12;
+                justify-self: center;
+                text-align: center;
+                margin-bottom: 35px;
+            }
+        }
+        h5 {
+            margin-bottom: 24px;
+            color: #919191;
+            font-weight: 600;
+        }
+        ul {
+            li {
+                a {
+                    display: inline-block;
+                    text-transform: uppercase;
+                    margin-bottom: 8px;
+                    color: #3d3b46;
+                    letter-spacing: 2px;
+                    font-weight: 600;
+                    padding-bottom: 2px;
+                    position: relative;
+                    padding-bottom: 2px;
+                    border-bottom: 2px solid transparent;
+                    transition: 0.5s;
+                    &:hover {
+                        border-bottom: 2px solid #3d3b46;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-top-widget {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 32px;
+        border-bottom: 1px solid #d9d9d9;
+        @media screen and (max-width: 992px) {
+            flex-direction: column;
+            padding-bottom: 52px;
+        }
+        img {
+            @media screen and (max-width: 992px) {
+                margin-bottom: 30px;
+            }
+        }
+        .social-icons {
+            display: inline-flex;
+            align-items: center;
+            li {
+                margin-left: 10px;
+                &:hover {
+                    #icon-hover {
+                        fill: black;
+                        transition: .2s ease-in;
+                    }
+                }
+            }
+        }
+    }
+}
